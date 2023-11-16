@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Current Day and Time</title>
+</head>
+<body>
+
+<p id="dayOfWeek"></p>
+<p id="currentTime"></p>
+
+<script>
+  var date = new Date();
+  var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var dayNumber = date.getDay();
+  var currentDay = daysOfWeek[dayNumber];
+
+  // Display the day of the week on the webpage
+  document.getElementById('dayOfWeek').textContent = 'Today is: ' + currentDay;
+
+  var time = date.toLocaleTimeString();
+
+  // Display the current time on the webpage
+  document.getElementById('currentTime').textContent = 'Current time is: ' + time;
+</script>
+
+</body>
+</html>
